@@ -2,7 +2,7 @@ from __future__ import division
 import time
 import os
 
-from flask import Flask, render_template
+from flask import Flask, render_template,redirect
 
 from flask_restful import Api
 from flask_cors import CORS, cross_origin
@@ -112,6 +112,7 @@ def right():
     pwm1.set_pwm(4, 0, 260)
     pwm2.set_pwm(7, 0, 260)
     time.sleep(0.5)
+    return redirect("http:127.0.0.1:6200", code=200)
 
 
 @app.route('/left', methods=['GET', 'POST'])
@@ -167,6 +168,7 @@ def left():
     pwm2.set_pwm(7, 0, 260)
     time.sleep(0.5)
     print("success")
+    return redirect("http:127.0.0.1:6200", code=200)
 
 @app.route('/up', methods=['GET', 'POST'])
 def halfMotion():
@@ -198,6 +200,7 @@ def halfMotion():
     pwm1.set_pwm(8, 0, 150)
     pwm2.set_pwm(3, 0, 400)
     standUp()
+    return redirect("http:127.0.0.1:6200", code=200)
 
 
 @app.route('/standup', methods=['GET', 'POST'])
@@ -225,6 +228,11 @@ def standUp():
     pwm2.set_pwm(4, 0, 250)
     pwm2.set_pwm(7, 0, 260)
     time.sleep(1)
+    return redirect("http:127.0.0.1:6200", code=200)
+    
+
+
+
 
 
 @app.route('/')
