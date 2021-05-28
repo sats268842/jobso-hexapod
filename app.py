@@ -120,6 +120,7 @@ def right():
 
 @app.route('/left', methods=['GET', 'POST'])
 def left():
+    print("left")
     pwm2.set_pwm(1, 0, 150)
     pwm1.set_pwm(4, 0, 150)
     pwm2.set_pwm(7, 0, 150)
@@ -169,6 +170,7 @@ def left():
     pwm1.set_pwm(4, 0, 260)
     pwm2.set_pwm(7, 0, 260)
     time.sleep(0.5)
+    print("success")
 
 @app.route('/up', methods=['GET', 'POST'])
 def halfMotion():
