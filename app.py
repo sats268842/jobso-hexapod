@@ -14,7 +14,7 @@ cors = CORS(app)
 
 app.secret_key = os.urandom(24)
 app.config['CORS_HEADERS'] = 'Content-Type'
-app.register_bluseprint(hexapod_blueprint, url_prefix="/hexapod")
+# app.register_bluseprint(hexapod_blueprint, url_prefix="/hexapod")
 
 if __name__ == "__main__":
 
