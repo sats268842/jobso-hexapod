@@ -50,9 +50,27 @@ span{
 }
     </style>
 </head>
+
+<script>
+     function Up() {
+        const uri = 'http://127.0.0.1/up';
+        const initDetails = {
+            method: 'post',
+            headers: {
+                "Content-Type": "application/json; charset=utf-8"
+            },
+            mode: "cors"
+        }
+
+        fetch( uri, initDetails )
+            .then()
+            .then( )
+            .catch( );
+        }
+</script>
 <body>
     <form action="/left" method="post">
-    <div class="round-button"><div class="round-button-circle"><a href="/left" class="round-button"><span><</span></a></div></div> 
+    <div class="round-button"><div class="round-button-circle"><a onclick="Up()" class="round-button"><span><</span></a></div></div> 
 </form>
 <form action="/standup" method="post">
      <div class="round-button"><div class="round-button-circle"><a href="/standup" class="round-button"><span>On</span></a></div></div>
