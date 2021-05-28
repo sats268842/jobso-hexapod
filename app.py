@@ -9,7 +9,7 @@ from flask_cors import CORS, cross_origin
 import logging
 import sys
 # from models.hexapod.view import app
-app = Flask(__name__)
+app = Flask(__name__, template_folder='./templates/')
 app.secret_key = "Secret Key"
 api = Api(app)
 cors = CORS(app)
@@ -59,10 +59,6 @@ import datetime
 import uuid
 
 
-# @vehicles_blueprint.route('/')
-# def index():
-# 	print("all")
-# 	# Doctors = Doctor.all()
 
 
 @app.route('/right', methods=['GET', 'POST'])
