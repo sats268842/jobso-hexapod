@@ -6,7 +6,7 @@ from flask_restful import Api
 from flask_cors import CORS, cross_origin
 import logging
 import sys
-from models.hexapod.view import hexapod_blueprint
+# from models.hexapod.view import hexapod_blueprint
 app = Flask(__name__)
 app.secret_key = "Secret Key"
 api = Api(app)
