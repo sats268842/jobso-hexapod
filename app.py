@@ -2,7 +2,7 @@ from __future__ import division
 import time
 import os
 
-from flask import Flask
+from flask import Flask, render_template
 
 from flask_restful import Api
 from flask_cors import CORS, cross_origin
@@ -229,6 +229,11 @@ def standUp():
     pwm2.set_pwm(4, 0, 250)
     pwm2.set_pwm(7, 0, 260)
     time.sleep(1)
+
+
+@app.route('/')
+def index():
+    return render_template('ui.html')
 
 if __name__ == "__main__":
 
