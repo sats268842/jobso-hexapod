@@ -56,9 +56,43 @@ span{
         const uri = 'http://127.0.0.1/up';
         const initDetails = {
             method: 'post',
-            headers: {
-                "Content-Type": "application/json; charset=utf-8"
-            },
+            mode: "cors"
+        }
+
+        fetch( uri, initDetails )
+            .then()
+            .then( )
+            .catch( );
+        }
+
+        function Left() {
+        const uri = 'http://127.0.0.1/left';
+        const initDetails = {
+            method: 'post',
+            mode: "cors"
+        }
+
+        fetch( uri, initDetails )
+            .then()
+            .then( )
+            .catch( );
+        }
+        function StandUp() {
+        const uri = 'http://127.0.0.1/standup';
+        const initDetails = {
+            method: 'post',
+            mode: "cors"
+        }
+
+        fetch( uri, initDetails )
+            .then()
+            .then( )
+            .catch( );
+        }
+        function Right() {
+        const uri = 'http://127.0.0.1/right';
+        const initDetails = {
+            method: 'post',
             mode: "cors"
         }
 
@@ -70,16 +104,16 @@ span{
 </script>
 <body>
     <form action="/left" method="post">
-    <div class="round-button"><div class="round-button-circle"><a onclick="Up()" class="round-button"><span><</span></a></div></div> 
+    <div class="round-button"><div class="round-button-circle"><button onclick="Left()" class="round-button"><span><</span></button></div></div> 
 </form>
 <form action="/standup" method="post">
-     <div class="round-button"><div class="round-button-circle"><a href="/standup" class="round-button"><span>On</span></a></div></div>
+     <div class="round-button"><div class="round-button-circle"><button onclick="StandUp()" class="round-button"><span>ON</span></button></div></div>
     </form>
     <form action="/up" method="post">
-    <div class="round-button"><div class="round-button-circle"><a href="/up" class="round-button"><span>Up</span></a></div></div>
+    <div class="round-button"><div class="round-button-circle"><button onclick="Up()" class="round-button"><span>Up</span></button></div></div>
 </form>
 <form action="/right" method="post">
-    <div class="round-button"><div class="round-button-circle"><a href="/right" class="round-button"><span>></span></a></div></div>
+    <div class="round-button"><div class="round-button-circle"><button onclick="Right()" class="round-button"><span>></span></button></div></div>
     </form>
 </body>
 </html>
